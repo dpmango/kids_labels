@@ -1,0 +1,40 @@
+// BUTTONS
+
+.btn
+	border-radius: 0px
+	font-family: 'Josefin Slab', serif
+	font-weight: 600
+	border: none
+	cursor: pointer
+	&:active, &:focus
+		text-decoration: none
+		border: none
+		outline: none
+		box-shadow: none
+
+.btn-secondary.active.focus, .btn-secondary.active:focus, .btn-secondary.active:hover, .btn-secondary:active.focus, .btn-secondary:active:focus, .btn-secondary:active:hover, .open>.dropdown-toggle.btn-secondary.focus, .open>.dropdown-toggle.btn-secondary:focus, .open>.dropdown-toggle.btn-secondary:hover
+	background: $secondaryColorActive
+	color: white
+	
+.btn--block
+	display: block
+
+.btn-primary
+	font-size: 20px
+	color: white
+	background: $primaryColor
+	transition: all .4s ease
+	&:hover, &:active, &:focus
+		background-color: $primaryColorActive
+	&:active:focus
+		background-color: $primaryColorActive
+.btn-secondary
+	font-size: 20px
+	color: white
+	background: $secondaryColor
+	transition: all .4s ease
+	&:hover, &:active, &:focus
+		background-color: $secondaryColorActive
+		color: white
+	&:active:focus
+		background-color: $secondaryColorActive
