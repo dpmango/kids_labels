@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Kids Labels </title>
 
-	<link rel="stylesheet" href="styles.css" type="text/css" />
-	<script src="scripts.js"></script>
+	<link rel="stylesheet" href="styles.min.css" type="text/css" />
+	<script src="scripts.min.js"></script>
 	<!--[if lt IE 9]>
     <script src="js/html5shiv.min.js"></script>
     <![endif]-->
@@ -24,16 +24,17 @@
 							<i class="ico ico-header-profile"></i>
 						</a>
 						<div class="header__regions">
-							<span class="header__current-region">Canada en</span>
-							<i class="ico ico-caret"></i>
-							<div class="header__region-select">
-								<a href="#" data-region="UNITED STATES">UNITED STATES</a>
-								<a href="#" data-region="CANADA FR">CANADA FR</a>
-								<a href="#" data-region="FRANCE">FRANCE</a>
-								<a href="#" data-region="BRAZIL">BRAZIL</a>
-								<a href="#" data-region="MEXICO">MEXICO</a>
-								<span id="appendCurRegion"></span>
-							</div>
+							<span class="header__current-region" id="regionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Canada en <i class="ico ico-caret"></i></span>
+							<ul class="dropdown-menu header__region-select" aria-labelledby="regionDropdown">
+								<div class="triangle-with-shadow">
+									<i class="ico ico-triangle"></i>
+								</div>
+								<li><a href="#" data-region="UNITED STATES">UNITED STATES</a></li>
+								<li><a href="#" data-region="CANADA FR">CANADA FR</a></li>
+								<li><a href="#" data-region="FRANCE">FRANCE</a></li>
+								<li><a href="#" data-region="BRAZIL">BRAZIL</a></li>
+								<li><a href="#" data-region="MEXICO">MEXICO</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -98,7 +99,7 @@
 				<div class="col-sm-12 col-md-11">
 					<div class="content pt20 have-border-bot"> <!-- this mostly dummy classes -->
 						<span>Text:</span>
-						<h1>h1: Josefin Slab Setttmibold Italic - 36 pt - #000000</h1>
+						<h1>h1: Josefin Slab Semibold Italic - 36 pt - #000000</h1>
 						<h2>h2: Josefin Slab Semibold Italic - 25 pt - #000000</h2>
 						<h3>h3: Raleway Semibold (All caps) - 15 pt - #000000</h3>
 						<p>Body copy: Raleway Regular - 15 pt - #000000</p>

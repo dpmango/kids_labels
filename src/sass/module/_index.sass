@@ -10,7 +10,6 @@
 
 .header__regions
 	display: inline-block
-	cursor: pointer !important
 	position: relative
 	&:before
 		display: inline-block
@@ -21,11 +20,6 @@
 		margin-bottom: -3px
 		margin-right: 25px
 		margin-left: 20px
-	&.active
-		.header__region-select
-			display: block
-		.ico-caret
-			@include transform(rotate(180deg))
 
 .header__current-region
 	text-transform: uppercase
@@ -40,21 +34,40 @@
 	z-index: 5
 	border: 1px solid $borderColor
 	text-align: right
-	padding: 10px 20px
+	border-radius: 0
+	padding: 10px 0px
 	box-shadow: 0 0 5px rgba(black, .3)
-	&:after
-		background: url('images/sprite.png') no-repeat -105px -8px
-		width: 20px
-		height: 12px
-		content: ' '
-		display: inline-block
-		position: absolute
-		top: -11px
-		z-index: -1
-		right: 8px
 	a
 		display: block
-		margin-bottom: 5px
+		padding: 1px 20px
+		font-weight: 600
+		color: $primaryColor
+		@include transition(all .4s ease)
+		&:hover
+			background: rgba($borderColor, .3)
+	.triangle-with-shadow
+		position: absolute
+		top: -20px
+		z-index: 2
+		right: 5px
+		.ico-triangle
+			position: relative
+			overflow: hidden
+			display: block
+			width: 40px
+			height: 20px
+			&:after
+				content: ' '
+				display: inline-block
+				width: 20px
+				height: 20px
+				background: white
+				transform: rotate(45deg)
+				position: absolute
+				top: 12px
+				right: 5px
+				border: 1px solid $borderColor
+				box-shadow: -1px -1px 10px -2px rgba(black, 0.3)
 
 
 .header__navigation

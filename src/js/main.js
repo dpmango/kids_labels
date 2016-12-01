@@ -12,7 +12,6 @@ $(document).ready(function(){
             scrollTop: $(el).offset().top}, 1000);
         return false; 
 	});
-
     // hamburger
 	var click = 1;
 
@@ -31,23 +30,10 @@ $(document).ready(function(){
 	}
 	
 	//region select
-	var was_the_region_selected = 0
-
-	$('.header__regions').on('click', function(){
-		if (was_the_region_selected == 1){
-			$('#appendCurRegion').html('<a href="#" data-region="CANADA EN">CANADA EN</a>');
-			was_the_region_selected--
-		} else {
-			$('#appendCurRegion').html('');
-		}
-		$(this).toggleClass('active');
-	});
-
 	$('.header__region-select a ').click(function(){
 		var c_val = $(this).data('region');
-		$(this).closest('.header__regions').find('.header__current-region').html(c_val);
+		$(this).closest('.header__regions').find('.header__current-region').html(c_val + "<i class='ico ico-caret'></i>");
 		$(this).parent('.header__regions').toggleClass('active');
-		was_the_region_selected++
 	});
 
 	// dropdown UI
