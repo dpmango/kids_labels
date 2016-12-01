@@ -18,31 +18,51 @@
 
 .ui-dropdown
 	position: relative
-	input[disabled]
-		cursor: pointer !important
-		background-color: white
+	select
+		padding: 0.5rem 0.75rem
+		background: white url('images/select-arrow.png') no-repeat 95% center
+		font-size: 15px
+		width: 100%
 		color: $fontColor
-	&.active
-		.ui-dropdown__select
-			display: block
-		.ico-caret-toggler
-			@include transform(translateY(-50%) rotate(180deg))
-.ui-dropdown__select
-	display: none
-	position: absolute
-	z-index: 2
-	top: 0
-	left: 0
-	width: 100%
-	background: white
-	border: 1px solid $borderColor
-
-	a
+		border: 1px solid $borderColor
+		border-radius: 0
 		display: block
-		padding: 7px 10px
-		transition: all .4s ease
-		&:hover
-			background: rgba($borderColor, .3)
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		cursor: pointer
+		outline: none
+	select:-moz-focusring
+		color: transparent
+		text-shadow: 0 0 0 #444
+	select::-ms-expand 
+		display: none
+
+	// input[disabled]
+	// 	cursor: pointer !important
+	// 	background-color: white
+	// 	color: $fontColor
+	// &.active
+	// 	.ui-dropdown__select
+	// 		display: block
+	// 	.ico-caret-toggler
+	// 		@include transform(translateY(-50%) rotate(180deg))
+// .ui-dropdown__select
+// 	display: none
+// 	position: absolute
+// 	z-index: 2
+// 	top: 0
+// 	left: 0
+// 	width: 100%
+// 	background: white
+// 	border: 1px solid $borderColor
+
+// 	a
+// 		display: block
+// 		padding: 7px 10px
+// 		transition: all .4s ease
+// 		&:hover
+// 			background: rgba($borderColor, .3)
 
 .ico-caret-toggler
 	background: url('images/sprite.png') no-repeat -28px -27px

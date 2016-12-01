@@ -17,7 +17,6 @@ body{
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @include mq($until: tablet) {font-size: 12px;}
 }
 
 a{

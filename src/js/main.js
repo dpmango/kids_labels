@@ -13,6 +13,25 @@ $(document).ready(function(){
         return false; 
 	});
 
+    // hamburger
+	var click = 1;
+
+	$("#show-me-menu").on("click", clickHamb);
+
+	function clickHamb() {
+	    if ( click == 1 ) {
+	        $(this).addClass('is-active');
+	        $('.mobile-nav').slideToggle(300);
+	        $('body').css('overflow-y', 'hidden');
+	        click = 2;
+	    } else {
+			$(this).removeClass('is-active');
+			$('.mobile-nav').hide();
+			$('body').css('overflow-y', 'scroll');
+	        click = 1;
+	    }
+	}
+	
 	//region select
 	var was_the_region_selected = 0
 

@@ -5,6 +5,8 @@
 	padding-top: 20px
 	padding-bottom: 20px
 	color: $primaryColor
+	@include mq($until: mobile)
+		display: none
 
 .header__regions
 	display: inline-block
@@ -59,6 +61,8 @@
 	position: relative
 	background: $primaryColor
 	color: white
+	@include mq($until: mobile)
+		display: none
 .header-logo
 	position: absolute
 	top: -63px
@@ -71,13 +75,26 @@
 	line-height: 0
 	a
 		display: inline-block
-		transition: all .4s ease
+		transition: background .4s ease
 		padding: 14px 40px 12px 40px
 		font-size: 20px
 		line-height: 1em
 		cursor: pointer
+		@include mq($until: desktop)
+			padding-left: 28px
+			padding-right: 28px
+		@include mq($until: tablet)
+			padding-left: 15px
+			padding-right: 15px
+		@include mq($until: bp675)
+			padding-left: 7px
+			padding-right: 7px
+
 		&:last-child //icon
 			padding: 0px 15px
+			@include mq($until: bp675)
+				padding-left: 7px
+				padding-right: 7px
 		&:hover
 			background: $primaryColorActive
 		&:focus, &:active
@@ -98,6 +115,8 @@
 	vertical-align: -12px
 	padding-top: 6px
 	cursor: pointer
+	@incldue mq($until: mobile)
+		padding: 0
 	.header__cart__counter
 		display: none
 	&.active
@@ -148,6 +167,9 @@
 	color: #444444
 	padding-top: 10px
 	display: inline-block
+	@include mq($until: mobile)
+		text-align: center
+		display: block
 
 .footer-copy
 	

@@ -40,7 +40,7 @@
 				<div class="col-sm-12 header__navigation">
 					<div class="row">
 						<div class="col-sm-3 col-md-2">
-							<img src="images/logo.png" class="header-logo img-fluid" alt="">
+							<img src="images/logo.png" class="header-logo" alt="">
 						</div>
 						<div class="col-sm-9 col-md-10">
 							<div class="header__links">
@@ -64,10 +64,31 @@
 	<header class="header-mobile">
 		<div class="container">
 			<div class="row">
-
+				<div class="col-xs-3">
+					<button class="hamburger hamburger--collapse" type="button" id="show-me-menu">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+				<div class="col-xs-6 text-center">
+					<img src="images/logo.png" class="header-logo-mobile img-fluid" alt="">
+				</div>
+				<div class="col-xs-3 text-right">
+					<div class="header__cart active"> <!-- toggle active class here -->
+						<span class="header__cart__counter">1</span>
+						<i class="ico ico-header-cart"></i>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
+	<section class="mobile-nav">
+		<a href="#">Products</a>
+		<a href="#">Value packs</a>
+		<a href="#">About us</a>
+		<a href="#">Help</a>
+	</section>
 	<!-- HEADER: END -->
 
 	<!-- GUIDE: START -->
@@ -133,15 +154,11 @@
 								<div class="form-group">
 									<label for="">Closed/opened</label>
 									<div class="ui-dropdown">
-										<input type="text" class="form-control" placeholder="Placeholder text" disabled>
-										<i class="ico ico-caret-toggler"></i>
-										<div class="ui-dropdown__select">
-											<a href="#" data-value="List item 1">List item 1</a>
-											<a href="#" data-value="List item 2">List item 2</a>
-											<a href="#" data-value="List item 3">List item 3</a>
-											<a href="#" data-value="List item 4">List item 4</a>
-											<a href="#" data-value="List item 5">List item 5</a>
-										</div>
+										<select placeholder="Select something">
+											<option value="1">One</option>
+											<option value="2">Two</option>
+											<option value="3">Three</option>
+										</select>
 									</div>
 								</div>
 							</div>
@@ -150,15 +167,11 @@
 								<div class="form-group">
 									<label for="">Closed/opened</label>
 									<div class="ui-dropdown">
-										<input type="text" class="form-control" placeholder="Placeholder text" disabled>
-										<i class="ico ico-caret-toggler"></i>
-										<div class="ui-dropdown__select">
-											<a href="#" data-value="List item 1">List item 1</a>
-											<a href="#" data-value="List item 2">List item 2</a>
-											<a href="#" data-value="List item 3">List item 3</a>
-											<a href="#" data-value="List item 4">List item 4</a>
-											<a href="#" data-value="List item 5">List item 5</a>
-										</div>
+										<select placeholder="Select something">
+											<option value="1">One</option>
+											<option value="2">Two</option>
+											<option value="3">Three</option>
+										</select>
 									</div>
 								</div>
 							</div>

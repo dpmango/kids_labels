@@ -19,11 +19,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@media (max-width: 47.99em) {
-  body {
-    font-size: 12px;
-  }
-}
 
 a {
   color: inherit;
@@ -135,10 +130,6 @@ b {
 .container {
   width: 100%;
   max-width: 970px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }
 
 .fl--right {
@@ -224,11 +215,26 @@ footer .yellow-bg {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+@media (max-width: 61.99em) {
+  footer {
+    margin-bottom: 70px;
+  }
+}
+@media (max-width: 35.99em) {
+  footer {
+    margin-bottom: 0px;
+  }
+}
 
 .header__top {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #75d2c1;
+}
+@media (max-width: 35.99em) {
+  .header__top {
+    display: none;
+  }
 }
 
 .header__regions {
@@ -295,6 +301,11 @@ footer .yellow-bg {
   background: #75d2c1;
   color: white;
 }
+@media (max-width: 35.99em) {
+  .header__navigation {
+    display: none;
+  }
+}
 
 .header-logo {
   position: absolute;
@@ -310,14 +321,38 @@ footer .yellow-bg {
 }
 .header__links a {
   display: inline-block;
-  transition: all 0.4s ease;
+  transition: background 0.4s ease;
   padding: 14px 40px 12px 40px;
   font-size: 20px;
   line-height: 1em;
   cursor: pointer;
 }
+@media (max-width: 61.99em) {
+  .header__links a {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+@media (max-width: 47.99em) {
+  .header__links a {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 42.1775em) {
+  .header__links a {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
 .header__links a:last-child {
   padding: 0px 15px;
+}
+@media (max-width: 42.1775em) {
+  .header__links a:last-child {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
 }
 .header__links a:hover {
   background: #5fc0ae;
@@ -341,6 +376,11 @@ footer .yellow-bg {
   vertical-align: -12px;
   padding-top: 6px;
   cursor: pointer;
+}
+@incldue mq($until: mobile) {
+  .header__cart {
+    padding: 0;
+  }
 }
 .header__cart .header__cart__counter {
   display: none;
@@ -393,6 +433,135 @@ footer .yellow-bg {
   padding-top: 10px;
   display: inline-block;
 }
+@media (max-width: 35.99em) {
+  .footer-copy {
+    text-align: center;
+    display: block;
+  }
+}
+
+.hamburger {
+  padding: 15px 0px 5px 0px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover .hamburger-inner {
+  margin-top: -3px;
+}
+.hamburger:hover .hamburger-inner:before {
+  top: -8px;
+}
+.hamburger:hover .hamburger-inner:after {
+  top: -16px;
+}
+
+.hamburger-box {
+  width: 21px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -7px;
+  width: 21px;
+  height: 3px;
+  background-color: white;
+  border-radius: 0px;
+  position: absolute;
+  transition: all 0.15s ease;
+}
+.hamburger-inner:before, .hamburger-inner:after {
+  width: 21px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  transition: all 0.15s ease;
+}
+.hamburger-inner:before, .hamburger-inner:after {
+  content: "";
+  display: block;
+}
+.hamburger-inner:before {
+  top: -6px;
+}
+.hamburger-inner:after {
+  top: -12px;
+}
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -6px, 0) rotate(-45deg);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--collapse.is-active .hamburger-inner:after {
+  top: 0;
+  opacity: 0;
+}
+.hamburger--collapse.is-active .hamburger-inner:before {
+  top: 0;
+  transform: rotate(-90deg);
+}
+
+.header-mobile {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background: #75d2c1;
+}
+@media (min-width: 36em) {
+  .header-mobile {
+    display: none;
+  }
+}
+
+.header-logo-mobile {
+  max-width: 100px;
+  position: absolute;
+  left: 50%;
+  bottom: -70px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.mobile-nav {
+  display: none;
+  font-family: "Josefin Slab", serif;
+  color: white;
+  font-size: 20px;
+  border-top: 1px solid #b9fced;
+  background: #75d2c1;
+}
+.mobile-nav a {
+  display: block;
+  border-bottom: 1px solid #b9fced;
+  padding: 6px 15px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.mobile-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
 .ico-header-profile {
   background: url("images/sprite.png") no-repeat -4px -4px;
@@ -423,6 +592,7 @@ footer .yellow-bg {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  white-space: normal;
 }
 .btn:active, .btn:focus {
   text-decoration: none;
@@ -487,39 +657,27 @@ footer .yellow-bg {
 .ui-dropdown {
   position: relative;
 }
-.ui-dropdown input[disabled] {
-  cursor: pointer !important;
-  background-color: white;
-  color: #000;
-}
-.ui-dropdown.active .ui-dropdown__select {
-  display: block;
-}
-.ui-dropdown.active .ico-caret-toggler {
-  -webkit-transform: translateY(-50%) rotate(180deg);
-  -moz-transform: translateY(-50%) rotate(180deg);
-  -ms-transform: translateY(-50%) rotate(180deg);
-  -o-transform: translateY(-50%) rotate(180deg);
-  transform: translateY(-50%) rotate(180deg);
-}
-
-.ui-dropdown__select {
-  display: none;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
+.ui-dropdown select {
+  padding: 0.5rem 0.75rem;
+  background: white url("images/select-arrow.png") no-repeat 95% center;
+  font-size: 15px;
   width: 100%;
-  background: white;
+  color: #000;
   border: 1px solid #cacaca;
-}
-.ui-dropdown__select a {
+  border-radius: 0;
   display: block;
-  padding: 7px 10px;
-  transition: all 0.4s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
 }
-.ui-dropdown__select a:hover {
-  background: rgba(202, 202, 202, 0.3);
+.ui-dropdown select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #444;
+}
+.ui-dropdown select::-ms-expand {
+  display: none;
 }
 
 .ico-caret-toggler {
