@@ -17,10 +17,9 @@ body{
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  animation: animatebg 10s infinite;
-  animation-timing-function: linear;
+  // animation: animatebg 10s infinite;
+  // animation-timing-function: linear;
 }
-
 @keyframes animatebg{
   0%{
     background-position: left center
