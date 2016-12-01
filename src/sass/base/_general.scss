@@ -12,11 +12,22 @@ body{
   font-weight: normal;
   color: $fontColor;
   font-size: 15px;
-  background: #ececec url('images/bg-pattern.jpg') repeat center;
+  background: #ececec url('images/bg-pattern.jpg') repeat left center;
   position: relative;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  animation: animatebg 10s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes animatebg{
+  0%{
+    background-position: left center
+  }
+  100% {
+    background-position: right center
+  }
 }
 
 a{
