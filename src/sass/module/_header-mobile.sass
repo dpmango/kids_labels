@@ -84,6 +84,8 @@
 	font-size: 20px
 	border-top: 1px solid #b9fced
 	background: $primaryColor
+	@include mq($from: mobile)
+		display: none !important
 	a
 		display: block
 		border-bottom: 1px solid #b9fced

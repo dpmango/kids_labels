@@ -550,6 +550,11 @@ footer .yellow-bg {
   border-top: 1px solid #b9fced;
   background: #75d2c1;
 }
+@media (min-width: 36em) {
+  .mobile-nav {
+    display: none !important;
+  }
+}
 .mobile-nav a {
   display: block;
   border-bottom: 1px solid #b9fced;

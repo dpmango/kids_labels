@@ -26,12 +26,10 @@ $(document).ready(function(){
 	    if ( click == 1 ) {
 	        $(this).addClass('is-active');
 	        $('.mobile-nav').slideToggle(300);
-	        $('body').css('overflow-y', 'hidden');
 	        click = 2;
 	    } else {
 			$(this).removeClass('is-active');
 			$('.mobile-nav').hide();
-			$('body').css('overflow-y', 'scroll');
 	        click = 1;
 	    }
 	}
